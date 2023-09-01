@@ -1,5 +1,5 @@
 <template>
-  <div class="box"> 首页 </div>
+  <div> 首页 </div>
 </template>
 
 <script lang="ts">
@@ -8,8 +8,4 @@
   export default Vue.extend({})
 </script>
 
-<style lang="scss" scoped>
-  .box {
-    font-size: 16px;
-  }
-</style>
+<style lang="scss" scoped></style>
