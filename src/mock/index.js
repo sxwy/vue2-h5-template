@@ -1,4 +1,3 @@
 module.exports = {
-  ...require('./user'),
-  ...require('./system')
+  ...require('./user')
 }
