@@ -15,7 +15,7 @@ export class HTTPError extends Error {
   }
 }
 
-export const createHTTPError = (
+export const createError = (
   code: string,
   message: string,
   config?: AxiosRequestConfig,

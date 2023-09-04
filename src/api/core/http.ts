@@ -1,6 +1,6 @@
 import axios from 'axios'
 import store from '@/store'
-import { createHTTPError, defaultErrorCode, defaultErrorMessage } from './error'
+import { createError, defaultErrorCode, defaultErrorMessage } from './error'
 
 let isRefreshToken = false // 是否正在刷新 token
 let httpList: (() => void)[] = [] // 暂存多余请求队列
@@ -60,7 +60,7 @@ export default (requestConfig = {}) => {
             }
           } else {
             return Promise.reject(
-              createHTTPError(
+              createError(
                 code,
                 response.data.message,
                 response.config,
@@ -74,7 +74,7 @@ export default (requestConfig = {}) => {
             return response.data.data
           } else {
             return Promise.reject(
-              createHTTPError(
+              createError(
                 defaultErrorCode,
                 response.data.msg,
                 response.config,
@@ -84,7 +84,7 @@ export default (requestConfig = {}) => {
           }
         } else {
           return Promise.reject(
-            createHTTPError(
+            createError(
               defaultErrorCode,
               defaultErrorMessage,
               response.config,
@@ -94,7 +94,7 @@ export default (requestConfig = {}) => {
         }
       } else {
         return Promise.reject(
-          createHTTPError(
+          createError(
             defaultErrorCode,
             defaultErrorMessage,
             response.config,
