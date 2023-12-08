@@ -6,7 +6,7 @@ Vue2 + TypeScript + Vant2 项目模板
 
 - 依赖管理：Yarn
 - 编程语言：HTML + TypeScript + Scss
-- 开发框架： Vue2
+- 开发框架：Vue2
 - 组件库：Vant2
 - 公共库：暂无
 
